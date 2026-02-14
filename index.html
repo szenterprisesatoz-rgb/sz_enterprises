@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SZ ENTERPRISES | AC, Fridge, TV & Washing Machine Sales and Service</title>
+<title>SZ ENTERPRISES |  AC, Fridge,TV & Washing Machine Sales & Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -11,30 +11,25 @@ body {
   background:#f5f5f5;
 }
 
-/* HEADER WITH IMAGE */
+/* HEADER */
 .header {
-  background: url('shop.jpg') no-repeat center;
-  background-size: cover;
+  background:#28a745;
   color:white;
   text-align:center;
-  padding:40px 20px;
+  padding:20px;
 }
 
-.header h1 {
-  margin:0;
-  font-size:28px;
-  background: rgba(0,0,0,0.6);
-  display:inline-block;
-  padding:10px 20px;
-  border-radius:10px;
+/* SLIDER */
+.slider {
+  width:100%;
+  height:180px;
+  overflow:hidden;
 }
 
-.header p {
-  margin:10px 0;
-  background: rgba(0,0,0,0.6);
-  display:inline-block;
-  padding:5px 15px;
-  border-radius:10px;
+.slider img {
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
 
 /* BUTTONS */
@@ -53,18 +48,30 @@ body {
   text-decoration:none;
 }
 
+/* GRID */
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  padding:10px;
+}
+
 /* CARD */
 .card {
   background:white;
-  margin:15px;
-  padding:15px;
-  border-radius:10px;
+  width:160px;
+  padding:10px;
+  border-radius:12px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
+  text-align:center;
 }
 
-img {
+.card img {
   width:100%;
+  height:120px;
   border-radius:10px;
+  object-fit:cover;
 }
 
 h2 {
@@ -75,12 +82,30 @@ h2 {
 /* BUTTON */
 .btn {
   display:inline-block;
-  padding:10px;
+  padding:8px;
   background:#28a745;
   color:white;
   text-decoration:none;
-  border-radius:5px;
-  margin-top:10px;
+  border-radius:6px;
+  margin-top:8px;
+}
+
+/* QR */
+.qr {
+  text-align:center;
+  padding:20px;
+}
+
+/* STAR */
+.star {
+  font-size:25px;
+  cursor:pointer;
+  color:gray;
+}
+
+.star:hover,
+.star.active {
+  color:gold;
 }
 
 /* FOOTER */
@@ -100,106 +125,118 @@ footer {
   <h1>SZ ENTERPRISES</h1>
   <p>AC, Fridge, TV & Washing Machine Sales and Service</p>
   <p>📞 9071939939</p>
-  <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
+  <p>📍 Bangalore</p>
 </div>
+
+<!-- IMAGE SLIDER -->
+<div class="slider">
+  <img id="slide" src="ac.jpg.jpeg">
+</div>
+
+<script>
+let images = ["ac.jpg.jpeg","tv.jpg.jpeg","singledoor.jpg.jpeg"];
+let i = 0;
+setInterval(function(){
+  i = (i+1) % images.length;
+  document.getElementById("slide").src = images[i];
+},2000);
+</script>
 
 <!-- BUTTONS -->
 <div class="top-buttons">
   <a href="tel:9071939939">📞 Call</a>
   <a href="https://wa.me/919071939939?text=Hi SZ ENTERPRISES">💬 WhatsApp</a>
-  <a href="https://www.google.com/maps?q=No.1/2+Arzi+Manzil+Bangalore">📍 Location</a>
-</div>
-
-<!-- PRODUCTS -->
-<h2>🛒 Products</h2>
-
-<div class="card">
-  <img src="singledoor.jpg.jpeg">
-  <h3>Single Door Fridge</h3>
-  <p>₹5,999</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I want Single Door Fridge">Buy</a>
-</div>
-
-<div class="card">
-  <img src="doubledoor.jpg.jpeg">
-  <h3>Double Door Fridge</h3>
-  <p>₹11,999</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I want Double Door Fridge">Buy</a>
-</div>
-
-<div class="card">
-  <img src="ac.jpg.jpeg">
-  <h3>AC (1 Ton)</h3>
-  <p>₹12,999</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I want AC">Buy</a>
-</div>
-
-<div class="card">
-  <img src="tv.jpg.jpeg">
-  <h3>32 Inch TV</h3>
-  <p>₹10,999</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I want TV">Buy</a>
+  <a href="https://www.google.com/maps?q=Bangalore">📍 Location</a>
 </div>
 
 <!-- SERVICES -->
 <h2>🛠 Services</h2>
 
-<div class="card">
-  <img src="ac.jpg.jpeg">
-  <h3>AC Service</h3>
-  <p>Inspection ₹299 | Warranty 90 Days</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I need AC Service">Book</a>
+<div class="grid">
+
+  <div class="card">
+    <img src="ac.jpg.jpeg">
+    <h4>AC Service</h4>
+    <p>₹299</p>
+    <a class="btn" href="https://wa.me/919071939939?text=AC Service">Book</a>
+  </div>
+
+  <div class="card">
+    <img src="Fridge.jpg.jpeg">
+    <h4>Fridge Service</h4>
+    <p>₹299</p>
+    <a class="btn" href="https://wa.me/919071939939?text=Fridge Service">Book</a>
+  </div>
+
+  <div class="card">
+    <img src="mobile.jpg.jpeg">
+    <h4>Mobile Service</h4>
+    <p>₹199</p>
+    <a class="btn" href="https://wa.me/919071939939?text=Mobile Service">Book</a>
+  </div>
+
 </div>
 
-<div class="card">
-  <img src="Fridge.jpg.jpeg">
-  <h3>Fridge Service</h3>
-  <p>Inspection ₹299 | Warranty 90 Days</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I need Fridge Service">Book</a>
+<!-- PRODUCTS -->
+<h2>🛒 Products</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="singledoor.jpg.jpeg">
+    <h4>Fridge</h4>
+    <p>₹5,999</p>
+    <a class="btn" href="https://wa.me/919071939939?text=Buy Fridge">Buy</a>
+  </div>
+
+  <div class="card">
+    <img src="tv.jpg.jpeg">
+    <h4>TV</h4>
+    <p>₹10,999</p>
+    <a class="btn" href="https://wa.me/919071939939?text=Buy TV">Buy</a>
+  </div>
+
 </div>
 
-<div class="card">
-  <img src="washing machine.jpg.jpeg">
-  <h3>Washing Machine Service</h3>
-  <p>Inspection ₹299 | Warranty 90 Days</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I need Washing Machine Service">Book</a>
-</div>
-
-<div class="card">
-  <img src="tv.jpg.jpeg">
-  <h3>TV Service</h3>
-  <p>Inspection ₹299 | Warranty 90 Days</p>
-  <a class="btn" href="https://wa.me/919071939939?text=I need TV Service">Book</a>
-</div>
-
-<div class="card">
-  <img src="mobile.jpg.jpeg">
-  <h3>Mobile Service</h3>
-  <p>Inspection ₹299 | Warranty 90 Days </p>
-  <a class="btn" href="https://wa.me/919071939939?text=I need Mobile Service">Book</a>
+<!-- QR -->
+<div class="qr">
+  <h2>💳 Scan & Pay</h2>
+  <img src="qr.png" width="150">
+  <p>Scan to Pay / WhatsApp</p>
 </div>
 
 <!-- FEEDBACK -->
-<h2>⭐ Customer Feedback</h2>
+<h2>⭐ Feedback</h2>
 
-<div class="card" style="text-align:center;">
-  <input type="text" placeholder="Your Name" style="padding:10px;width:80%;"><br><br>
-  <textarea placeholder="Your Feedback" style="padding:10px;width:80%;"></textarea><br><br>
-  ⭐⭐⭐⭐⭐<br><br>
-  <button style="padding:10px 20px;background:#28a745;color:white;border:none;border-radius:10px;">Submit</button>
+<div style="text-align:center;">
+  <input type="text" placeholder="Your Name"><br><br>
+  <textarea placeholder="Your Feedback"></textarea><br><br>
+
+  <div>
+    <span class="star" onclick="rate(1)">★</span>
+    <span class="star" onclick="rate(2)">★</span>
+    <span class="star" onclick="rate(3)">★</span>
+    <span class="star" onclick="rate(4)">★</span>
+    <span class="star" onclick="rate(5)">★</span>
+  </div>
+
+  <br>
+  <button class="btn">Submit</button>
 </div>
+
+<script>
+function rate(n){
+  let stars = document.querySelectorAll('.star');
+  stars.forEach((s,i)=>{
+    s.classList.toggle('active', i < n);
+  });
+}
+</script>
 
 <!-- FOOTER -->
 <footer>
-© 2026 SZ ENTERPRISES | Bangalore
+© 2026 SZ ENTERPRISES |Bangalore
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
