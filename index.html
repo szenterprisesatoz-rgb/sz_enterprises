@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SZ ENTERPRISES | AC, Fridge, TV & Washing Machine Sales and Service</title>
+<title>SZ ENTERPRISES | AC, Fridge, TV & Washing Machine Sales & Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "SZ ENTERPRISES",
-  "image": "https://example.com/shop.jpg",
-  "description": "AC, Fridge, TV & Washing Machine Sales and Service in Bangalore",
-  "telephone": "+919071939939",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road",
-    "addressLocality": "Bangalore",
-    "postalCode": "560030",
-    "addressCountry": "IN"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "sameAs": ["https://www.google.com/maps?q=No.1/2+Arzi+Manzil+Bangalore"]
-}
-</script>
-
 <style>
-body {font-family: Arial,sans-serif; margin:0; background:#f5f5f5;}
-.header {background:#28a745; color:white; text-align:center; padding:20px;}
-.header h1 {margin:0;font-size:28px;}
-.header p {margin:5px 0; font-size:14px;}
-.top-buttons{text-align:center;padding:10px;}
-.top-buttons a{display:inline-block;margin:5px;padding:10px 15px;background:#28a745;color:white;border-radius:20px;text-decoration:none;}
-.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:10px;}
-.card{background:white;width:200px;padding:10px;border-radius:12px;box-shadow:0 0 10px rgba(0,0,0,0.1);text-align:center;}
-.card img{width:100%;height:130px;border-radius:10px;object-fit:cover;}
-h2{text-align:center;color:#28a745;}
-.btn{display:inline-block;padding:8px;background:#28a745;color:white;text-decoration:none;border-radius:6px;margin-top:8px;}
-ul{text-align:left;padding-left:20px;font-size:14px;}
-.star{font-size:20px;cursor:pointer;color:gray;}
-.star.active{color:gold;}
-footer{text-align:center;padding:10px;background:#28a745;color:white;}
+body { font-family: Arial; margin:0; background:#f5f5f5; }
+/* HEADER */
+.header { background:#28a745; color:white; text-align:center; padding:25px 10px; }
+.header h1 { margin:0; font-size:28px; }
+.header p { margin:5px 0; font-size:16px; }
+/* BUTTONS */
+.top-buttons { text-align:center; padding:10px; }
+.top-buttons a { display:inline-block; margin:5px; padding:10px 15px; background:#28a745; color:white; border-radius:20px; text-decoration:none; font-weight:bold; }
+/* GRID */
+.grid { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:10px; }
+/* CARD */
+.card { background:white; width:180px; padding:10px; border-radius:12px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; }
+.card img { width:100%; height:120px; border-radius:10px; object-fit:cover; }
+.card h4 { margin:8px 0 5px 0; color:#28a745; }
+.card p, .card ul { font-size:14px; text-align:left; margin:5px 0; }
+.card ul { padding-left:15px; }
+/* BUTTON */
+.btn { display:inline-block; padding:8px; background:#28a745; color:white; text-decoration:none; border-radius:6px; margin-top:8px; font-weight:bold; }
+/* FEEDBACK */
+.feedback { text-align:center; padding:20px; }
+/* SLIDER */
+.slider { width:100%; height:200px; overflow:hidden; margin-bottom:10px; }
+.slider img { width:100%; height:200px; object-fit:cover; border-radius:12px; }
+/* FOOTER */
+footer { text-align:center; padding:15px; background:#28a745; color:white; margin-top:20px; }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <h1>SZ ENTERPRISES</h1>
-  <p>AC, Fridge, TV & Washing Machine Sales and Service</p>
-  <p>📞 9071939939</p>
-  <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
-  <p>⏰ Open 24/7 including Sunday</p>
+  <p>AC, Fridge, TV & Washing Machine Sales & Service</p>
+  <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
+  <p>⏰ Open 24/7 including Sundays</p>
 </div>
 
+<!-- IMAGE SLIDER -->
+<div class="slider">
+  <img id="slide" src="ac.jpg.jpeg" alt="SZ Enterprises">
+</div>
+
+<script>
+let images = [
+  "ac.jpg.jpeg","tv.jpg.jpeg","singledoor.jpg.jpeg",
+  "doubledoor.jpg.jpeg","topload.jpg.jpeg","frontload.jpg.jpeg",
+  "washing machine.jpg.jpeg","mobile.jpg.jpeg"
+];
+let i = 0;
+setInterval(function(){
+  i = (i+1) % images.length;
+  document.getElementById("slide").src = images[i];
+},2500);
+</script>
+
+<!-- BUTTONS -->
 <div class="top-buttons">
   <a href="tel:9071939939">📞 Call</a>
   <a href="https://wa.me/919071939939?text=Hi SZ ENTERPRISES">💬 WhatsApp</a>
-  <a href="https://www.google.com/maps?q=No.1/2+Arzi+Manzil+Bangalore">📍 Location</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=No.1/2,+Arzi+Manzil,+Muthanna+Garden,+Anepalya+Main+Road,+Bangalore+560030" target="_blank">📍 Location</a>
 </div>
 
-<h2>🛠 Services</h2>
+<!-- SERVICES -->
+<h2 style="text-align:center;">🛠 Services</h2>
 <div class="grid">
 
   <div class="card">
     <img src="ac.jpg.jpeg" alt="AC Service">
     <h4>AC Service</h4>
-    <p>Inspection ₹299 | Warranty 90 Days</p>
     <ul>
       <li>Installation</li>
       <li>Dismantling</li>
@@ -80,21 +83,27 @@ footer{text-align:center;padding:10px;background:#28a745;color:white;}
       <li>Gas Charging</li>
       <li>Water Leakage</li>
     </ul>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="ac-service">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>₹299 | Warranty 90 Days | 24/7</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I need AC Service at SZ ENTERPRISES">Book</a>
+  </div>
+
+  <div class="card">
+    <img src="tv.jpg.jpeg" alt="TV Service">
+    <h4>TV Service</h4>
+    <ul>
+      <li>TV Repair</li>
+      <li>Display</li>
+      <li>Backlight</li>
+    </ul>
+    <p>₹299 | Warranty 90 Days | 24/7</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
+    <a class="btn" href="https://wa.me/919071939939?text=I need TV Service at SZ ENTERPRISES">Book</a>
   </div>
 
   <div class="card">
     <img src="Fridge.jpg.jpeg" alt="Fridge Service">
     <h4>Fridge Service</h4>
-    <p>Inspection ₹299 | Warranty 90 Days</p>
     <ul>
       <li>Power Issue</li>
       <li>Gas Charging</li>
@@ -102,96 +111,50 @@ footer{text-align:center;padding:10px;background:#28a745;color:white;}
       <li>Door Gas Kit</li>
       <li>Water Leakage</li>
     </ul>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="fridge-service">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>₹299 | Warranty 90 Days | 24/7</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I need Fridge Service at SZ ENTERPRISES">Book</a>
-  </div>
-
-  <div class="card">
-    <img src="tv.jpg.jpeg" alt="TV Service">
-    <h4>TV Service</h4>
-    <p>Inspection ₹299 | Warranty 90 Days</p>
-    <ul>
-      <li>TV Repair</li>
-      <li>Display</li>
-      <li>Back Light</li>
-    </ul>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="tv-service">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
-    <a class="btn" href="https://wa.me/919071939939?text=I need TV Service at SZ ENTERPRISES">Book</a>
   </div>
 
   <div class="card">
     <img src="washing machine.jpg.jpeg" alt="Washing Machine Service">
     <h4>Washing Machine Service</h4>
-    <p>Inspection ₹299 | Warranty 90 Days</p>
     <ul>
       <li>Power Issues</li>
       <li>Drum Issue</li>
       <li>Water Leakage</li>
       <li>Door Gas Kit</li>
     </ul>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="washing-service">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>₹299 | Warranty 90 Days | 24/7</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I need Washing Machine Service at SZ ENTERPRISES">Book</a>
   </div>
 
   <div class="card">
     <img src="mobile.jpg.jpeg" alt="Mobile Service">
     <h4>Mobile Service</h4>
-    <p>Inspection ₹199</p>
     <ul>
       <li>Display</li>
       <li>Motherboard Issue</li>
-      <li>Battery</li>
-      <li>All Mobile Brands</li>
+      <li>Battery Replacement</li>
+      <li>All Brands Supported</li>
     </ul>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="mobile-service">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>₹199 | Warranty 30 Days | 24/7</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I need Mobile Service at SZ ENTERPRISES">Book</a>
   </div>
 
 </div>
 
-<h2>🛒 Products</h2>
+<!-- PRODUCTS -->
+<h2 style="text-align:center;">🛒 Products</h2>
 <div class="grid">
 
   <div class="card">
     <img src="singledoor.jpg.jpeg" alt="Single Door Fridge">
     <h4>Single Door Fridge</h4>
     <p>₹5,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="single-fridge">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I want Single Door Fridge from SZ ENTERPRISES">Buy</a>
   </div>
 
@@ -199,59 +162,15 @@ footer{text-align:center;padding:10px;background:#28a745;color:white;}
     <img src="doubledoor.jpg.jpeg" alt="Double Door Fridge">
     <h4>Double Door Fridge</h4>
     <p>₹11,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="double-fridge">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I want Double Door Fridge from SZ ENTERPRISES">Buy</a>
-  </div>
-
-  <div class="card">
-    <img src="ac.jpg.jpeg" alt="AC">
-    <h4>AC (1 Ton)</h4>
-    <p>₹13,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="ac-product">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
-    <a class="btn" href="https://wa.me/919071939939?text=I want AC from SZ ENTERPRISES">Buy</a>
-  </div>
-
-  <div class="card">
-    <img src="tv.jpg.jpeg" alt="TV">
-    <h4>32 Inch TV</h4>
-    <p>₹10,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="tv-product">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
-    <a class="btn" href="https://wa.me/919071939939?text=I want TV from SZ ENTERPRISES">Buy</a>
   </div>
 
   <div class="card">
     <img src="topload.jpg.jpeg" alt="Top Load Washing Machine">
     <h4>Top Load Washing Machine</h4>
     <p>₹7,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="topload-product">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I want Top Load Washing Machine from SZ ENTERPRISES">Buy</a>
   </div>
 
@@ -259,36 +178,87 @@ footer{text-align:center;padding:10px;background:#28a745;color:white;}
     <img src="frontload.jpg.jpeg" alt="Front Load Washing Machine">
     <h4>Front Load Washing Machine</h4>
     <p>₹12,999</p>
-    <p>📞 9071939939 | 📍 No.1/2, Arzi Manzil, Bangalore</p>
-    <div class="rating" data-id="frontload-product">
-      <span class="star" onclick="rate(this,1)">★</span>
-      <span class="star" onclick="rate(this,2)">★</span>
-      <span class="star" onclick="rate(this,3)">★</span>
-      <span class="star" onclick="rate(this,4)">★</span>
-      <span class="star" onclick="rate(this,5)">★</span>
-    </div>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
     <a class="btn" href="https://wa.me/919071939939?text=I want Front Load Washing Machine from SZ ENTERPRISES">Buy</a>
+  </div>
+
+  <div class="card">
+    <img src="ac.jpg.jpeg" alt="AC">
+    <h4>AC (1 Ton)</h4>
+    <p>₹12,999</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
+    <a class="btn" href="https://wa.me/919071939939?text=I want AC from SZ ENTERPRISES">Buy</a>
+  </div>
+
+  <div class="card">
+    <img src="tv.jpg.jpeg" alt="32 Inch TV">
+    <h4>32 Inch TV</h4>
+    <p>₹10,999</p>
+    <p>📍 No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030</p>
+    <a class="btn" href="https://wa.me/919071939939?text=I want 32 Inch TV from SZ ENTERPRISES">Buy</a>
   </div>
 
 </div>
 
-<script>
-function rate(el, rating){
-  let container = el.parentElement;
-  let stars = container.querySelectorAll('.star');
-  stars.forEach((s,i)=>{
-    s.classList.toggle('active', i < rating);
-  });
+<!-- FEEDBACK -->
+<h2 style="text-align:center;">⭐ Customer Feedback</h2>
+<div class="feedback">
+  <input type="text" placeholder="Your Name" style="padding:10px;width:80%;"><br><br>
+  <textarea placeholder="Your Feedback" style="padding:10px;width:80%;"></textarea><br><br>
+  <button class="btn">Submit</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 SZ ENTERPRISES | 24/7 Open | No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road, Bangalore - 560030
+</footer>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "SZ ENTERPRISES",
+  "image": "https://yourwebsite.com/logo.jpg",
+  "url": "https://yourwebsite.com",
+  "telephone": "+919071939939",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No.1/2, Arzi Manzil, Muthanna Garden, Anepalya Main Road",
+    "addressLocality": "Bangalore",
+    "postalCode": "560030",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "sameAs": ["https://wa.me/919071939939"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SZ ENTERPRISES Services & Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "AC Service" },
+        "url": "https://wa.me/919071939939?text=I need AC Service at SZ ENTERPRISES"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "TV Service" },
+        "url": "https://wa.me/919071939939?text=I need TV Service at SZ ENTERPRISES"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Product", "name": "Single Door Fridge" },
+        "url": "https://wa.me/919071939939?text=I want Single Door Fridge from SZ ENTERPRISES"
+      }
+    ]
+  }
 }
 </script>
-
-<footer>
-© 2026 SZ ENTERPRISES | Open 24/7 including Sunday | Bangalore
-</footer>
 
 </body>
 </html>
 
 
+   
 
 
